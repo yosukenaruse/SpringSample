@@ -8,6 +8,7 @@ Spring BootとMyBatisを使用したサンプルプロジェクト
 - MyBatis 3.0.3
 - SQLite
 - Gradle
+- Spring Boot DevTools
 
 ## 環境構築手順
 
@@ -36,6 +37,11 @@ CREATE TABLE t_sample(id INTEGER PRIMARY KEY, name TEXT NOT NULL);
 ```bash
 gradle bootRun
 ```
+
+### 5. ホットデプロイの設定
+- アプリケーション起動中にJavaファイルを変更すると、自動的に再起動されます
+- 静的ファイル（HTML, CSS, JavaScript等）は即時反映されます
+- 再起動を除外するファイルは`application.properties`で設定可能です
 
 ## 機能
 - サンプルデータの検索
@@ -69,10 +75,16 @@ gradle build --refresh-dependencies
 gradle clean build
 ```
 
+### Hot Reload
+```bash
+gradle build --continuous
+gradle bootRun 
+```
+
 ## Todo
 - エラーハンドリング
 - ロギングAOP
 - テストスクリプト
 - 入力チェック
 - Upsert処理
-- 性的ファイル配置
+- 静的ファイル配置
