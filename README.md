@@ -86,9 +86,9 @@ gradle bootRun
 - MyBatis　DONE
 - Select　DONE
 - Hot Reload　DONE
-- Upsert処理
-- エラーハンドリング
-- 入力チェック
-- ロギングAOP
+- Upsert処理　DONE
+- エラーハンドリング　DONE
+- 入力チェック　DONE
+- ロギングAOP　DONE
 - テストスクリプト
 - 静的ファイル配置
