@@ -1,0 +1,52 @@
+openapi: 3.0.3
+info:
+  title: Spring Sample API
+  description: Spring BootサンプルアプリケーションのAPI仕様書
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8080
+    description: ローカル開発環境
+
+tags:
+  - name: テスト
+    description: テスト用のAPI
+
+paths:
+  /test:
+    get:
+      tags:
+        - テスト
+      summary: テスト値の取得
+      description: データベースからテスト用の数値を取得します
+      operationId: getTestValue
+      responses:
+        '200':
+          description: 正常にデータを取得できた場合
+          content:
+            application/json:
+              schema:
+                type: integer
+                format: int32
+                example: 1
+                description: データベースから取得した数値
+        '500':
+          description: サーバーエラーが発生した場合
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Internal Server Error"
+                    description: エラーメッセージ
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: "2024-03-20T10:30:00Z"
+                    description: エラー発生時刻
+
+components:
+  schemas: {}
+  securitySchemes: {}
