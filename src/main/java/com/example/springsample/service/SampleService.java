@@ -2,6 +2,7 @@ package com.example.springsample.service;
 
 import java.util.List;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import com.example.springsample.entity.Sample;
 import com.example.springsample.mapper.SampleMapper;
 
@@ -20,5 +21,10 @@ public class SampleService {
     
     public List<Sample> findByName(String name) {
         return sampleMapper.findByName(name);
+    }
+
+    @Transactional
+    public void upsert(Sample sample) {
+        sampleMapper.upsert(sample);
     }
 } 

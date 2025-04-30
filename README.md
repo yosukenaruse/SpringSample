@@ -82,9 +82,13 @@ gradle bootRun
 ```
 
 ## Todo
+- Controller　DONE
+- MyBatis　DONE
+- Select　DONE
+- Hot Reload　DONE
+- Upsert処理
 - エラーハンドリング
+- 入力チェック
 - ロギングAOP
 - テストスクリプト
-- 入力チェック
-- Upsert処理
 - 静的ファイル配置
