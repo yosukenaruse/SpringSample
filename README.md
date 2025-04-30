@@ -90,5 +90,5 @@ gradle bootRun
 - エラーハンドリング　DONE
 - 入力チェック　DONE
 - ロギングAOP　DONE
-- テストスクリプト
+- テストスクリプト　DONE
 - 静的ファイル配置　DONE
