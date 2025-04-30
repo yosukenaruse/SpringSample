@@ -91,4 +91,4 @@ gradle bootRun
 - 入力チェック　DONE
 - ロギングAOP　DONE
 - テストスクリプト
-- 静的ファイル配置
+- 静的ファイル配置　DONE
